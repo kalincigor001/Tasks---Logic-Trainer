@@ -1,21 +1,23 @@
-# функция random генерирует случайное дробное число от 0 до 1
+# the random function generates a random fractional number between 0 and 1
 from random import random
-
-#при умножении на 900 получается случайное число от 9 до 899.(9) Если прибавить 100, то получится число от 100 до 999.(9)
+print("A programm for calculate the sum of digits of a random 3-digit number:")
+#when multiplied by 900, you get a random number between 9 and 899. (9) If you add 100, you get a number between 100 and 999. (9)
 n = random() * 900 + 100
 
-#Отбрасываю дробную часть, число выводится на экран
+#I discard the fractional part, the number is displayed
 n = int (n)
 print(n)
 
-#Извлекается первая цифра (старший разряд) числа путем деления нацело на 100
+#The first digit (most significant bit) of the number is extracted by dividing it by 100
 a = n // 100
 
-#Деление нацело на 10 удаляет последнюю цифру числа. Затем нахождение остатка при делении на 10 извлекает последнюю цифру, которая в  исходном числе была средней
+#Division by 10 removes the last digit of the number. Then finding the remainder when dividing by 10 extracts the last digit that was the middle in the original number
 b = (n // 10) % 10
 
-#Последняя цифра (младший разряд) числа находится путем нахождения остатка при делении нацело на 10.
+#The last digit (least significant bit) of a number is found by finding the remainder when divided by 10.
 c = n % 10
 
-#Вычисляется сумма цифр и выводится на экран
+#The sum of the digits is calculated and displayed
+print("The calculated sum of the digits will be as follows:")
 print(a + b + c)
+print ("Thank you for using this program!")
