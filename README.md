@@ -1,1 +1,1 @@
-# Tasks---Logic-Trainer
+# Tasks Logic Trainer
